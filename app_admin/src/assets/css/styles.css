@@ -1,0 +1,10 @@
+.card:hover {
+  transform: translateY(-4px);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  object-fit: cover;
+  height: 220px;
+}

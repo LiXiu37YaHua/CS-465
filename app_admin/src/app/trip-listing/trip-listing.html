@@ -1,0 +1,18 @@
+<!-- trip-listing.component.html -->
+<div class="container">
+  <div class="row">
+    <div *ngFor="let trip of trips" class="col-md-4 mb-4 d-flex">
+      <div class="card flex-fill h-100 shadow-sm border-0">
+        <img [src]="'assets/images/' + trip.image" alt="{{ trip.name }}" class="card-img-top rounded-top">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">{{ trip.name }}</h5>
+          <h6 class="card-subtitle text-muted">{{ trip.resort }}</h6>
+          <p class="card-text mt-2">
+            {{ trip.length }} — only {{ trip.perPerson | currency:'USD':'symbol' }} per person
+          </p>
+          <p [innerHTML]="trip.description"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
